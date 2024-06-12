@@ -84,7 +84,7 @@ class JuegoController extends AbstractController
             $imgSec3 = $array["Img_sec3"];
             $imgSec4 = $array["Img_sec4"];
             $sinopsis = $array["Sinopsis"];
-            $idDesarrollador = intval($array["Desarrolladores_IdDesarrolladores"]);
+            $idDesarrollador = intval($array["Desarrolladores_idDesarrolladores"]);
 
 
             if($nombre == "" || $etiquetas == "" || $fechaPublicacion == "" || $nombreDesarrollador == "" || $rebaja < 0 || $precio < 0 || $imgPrin == "" || $imgSec1 == "" || $imgSec2 == "" || $imgSec3 == "" || $imgSec4 == "" || $sinopsis == "" || $idDesarrollador == 0){
@@ -140,18 +140,18 @@ class JuegoController extends AbstractController
             $array = get_object_vars($data);
 
             $idJuego = intval($array["id"]);
-            $nombre = $array["nombre"];
-            $etiquetas = $array["etiquetas"];
-            $fechaPublicacion = $array["fechaPublicacion"]; // YYYY-MM-DD
-            $nombreDesarrollador = $array["nombreDesarrollador"];
-            $precio = floatval($array["precio"]);
-            $rebaja = intval($array["rebaja"]);
-            $imgPrin = $array["imgPrin"];
-            $imgSec1 = $array["imgSec1"];
-            $imgSec2 = $array["imgSec2"];
-            $imgSec3 = $array["imgSec3"];
-            $imgSec4 = $array["imgSec4"];
-            $sinopsis = $array["sinopsis"];
+            $nombre = $array["Nombre"];
+            $etiquetas = $array["Etiquetas"];
+            $fechaPublicacion = $array["Fecha_publicacion"]; // YYYY-MM-DD
+            $nombreDesarrollador = $array["Nombre_Desarrollador"];
+            $precio = floatval($array["Precio"]);
+            $rebaja = intval($array["Rebaja"]);
+            $imgPrin = $array["Img_principal"];
+            $imgSec1 = $array["Img_sec1"];
+            $imgSec2 = $array["Img_sec2"];
+            $imgSec3 = $array["Img_sec3"];
+            $imgSec4 = $array["Img_sec4"];
+            $sinopsis = $array["Sinopsis"];
 
             if($nombre == "" || $etiquetas == "" || $fechaPublicacion == "" || $nombreDesarrollador == "" || $rebaja < 0 || $precio < 0 || $imgPrin == "" || $imgSec1 == "" || $imgSec2 == "" || $imgSec3 == "" || $imgSec4 == "" || $sinopsis == "" || $idJuego == 0){
                 throw new BadRequestException("BadRequest");

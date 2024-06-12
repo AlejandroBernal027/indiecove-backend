@@ -46,11 +46,11 @@ class ValoracionesController extends AbstractController
             $data = json_decode($request->getContent());
             $array = get_object_vars($data);
 
-            $nombre = $array["nombreUsuario"];
-            $puntuacion = $array["puntuacion"];
-            $comentario = $array["comentario"];
-            $idJuego = intval($array["idJuego"]);
-            $idJugador = intval($array["idJugador"]);
+            $nombre = $array["Nombre_usuario"];
+            $puntuacion = $array["Puntuacion"];
+            $comentario = $array["Comentario"];
+            $idJuego = intval($array["Juego_idJuego"]);
+            $idJugador = intval($array["Jugadores_idJugadores"]);
 
 
             if($nombre == "" || $puntuacion == "" || $comentario == "" || $idJuego < 0 || $idJugador < 0){
